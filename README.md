@@ -2,7 +2,7 @@
 
 ## Description
 
-Plataforma para realizar y crear actividades deportivas.
+Platform for creating sports activities in which, in addition, you can reserve your assistance to the activities already created.
 
 ## User Sories
 

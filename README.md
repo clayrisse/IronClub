@@ -6,6 +6,18 @@ Plataforma para realizar y crear actividades deportivas.
 
 ## User Sories
 
+- **404** - As a user I want to see a nice 404 page when I go to a page that doesn’t exist so that I know it was my fault 
+- **500** - As a user I want to see a nice error page when the super team screws it up so that I know that is not my fault 
+- **homepage** - As a user I want to be able to access the homepage to see what the app is about, picture galleries, all the amenities and possible classes. 
+- **siup** - As a user I want to sign up on the webpage so that I can join and create classes 
+- **login** - As a user I want to be able to log in so that I can get see my classes and schedules 
+- **logout** - As a user I want to be able to log out from the webpage so that I can make sure no one will access my account 
+- **activities schedule** - As a user I want to see all the events available so that I can choose which ones I prefer. 
+- **activities schedule** - As a user I want to see all the events available so that I can choose which ones I prefer. 
+- **activity detail** - As a user I want to see the event details and comments of one event so that I can  **join** 
+- **activity creator** - As a user /instructor, I want to be able to create a class event so that I can publish in the calendar class 
+- **user class listing** - As a user I want to see the listings of past classes and reserved classes. Also be able to delete to sing out of the list. 
+- **instructor class listing** - As a user /instructor I want to see the event details and attendee list of one class and be able to edit or cancel them.
 
 
 ## Back-end
@@ -31,6 +43,36 @@ POST | /classes/:id/edit-class | Private route. Renders edit-class form profile.
 ## Models
 
 User Model
+```
+{
+    title: String,
+    img: { type: String, default: '#' },
+    description: String,
+    sport: { type: String, enum: ['tennis', 'football', 'swimming'] },
+    participants: Number,
+    date: Date, 
+    instructor:  { type: Schema.Types.ObjectId, ref: 'User' },
+    asisted: { type: Boolean, default: false },
+    coments: String,
+    rating: { type: Number, min: 1, max: 5 }
+    //reserv: { type: Schema.Types.ObjectId, ref: 'reservCat' }
+}
+```
 
+Activity Model
+```
+{
+    title: String,
+    img: { type: String, default: '#' },
+    description: String,
+    sport: { type: String, enum: ['tennis', 'football', 'swimming'] },
+    participants: Number,
+    date: Date, 
+    instructor:  { type: Schema.Types.ObjectId, ref: 'User' },
+    asisted: { type: Boolean, default: false },
+    coments: String,
+    rating: { type: Number, min: 1, max: 5 }
+}
+```
 
 

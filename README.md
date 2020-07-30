@@ -75,4 +75,22 @@ Activity Model
 }
 ```
 
+## Links
+
+**Trello**
+
+See our [Trello](https://trello.com/b/x0IQmzYu/ironclub) board.
+
+**Git**
+
+[Git]() repository.
+
+**Deploy**
+
+[Deploy]().
+
+**Slides**
+
+Presentation [slides]().
+
 
